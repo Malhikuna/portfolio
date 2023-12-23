@@ -1459,6 +1459,10 @@ footer .text {
     margin-right: 0;
   }
 
+  .hero .main-content .button {
+    width: 70%;
+  }
+
   .hero .row {
     flex-direction: column-reverse;
     margin-top: 90px;
@@ -1480,7 +1484,7 @@ footer .text {
   }
 
   .hero .blob-background {
-    /* display: none; */
+    display: none;
   }
 
   .hero .main-content i {
@@ -1506,6 +1510,35 @@ footer .text {
   /* About */
   .about {
     height: 150vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .about span {
+    /* font-size: 1rem; */
+  }
+
+  .about .about-text p {
+    width: 300px;
+    margin-bottom: 20px;
+    margin: auto;
+    text-align: justify;
+  }
+
+  .about .exp-area {
+    /* justify-self: center; */
+    margin: auto;
+    width: 340px;
+    height: 300px;
+  }
+
+  .about .exp-area p {
+    margin-top: 10px;
+    width: 300px;
+  }
+
+  .about .exp-area span {
+    font-size: 1rem;
   }
 
   .about-content {
@@ -1523,6 +1556,11 @@ footer .text {
     text-align: center;
   }
 
+  .interest i {
+    width: 50px;
+    height: 50px;
+  }
+
   .about svg {
     margin-top: 385px;
   }
@@ -1536,9 +1574,12 @@ footer .text {
   }
 
   .skils-content {
-    justify-content: center;
     flex-direction: column;
-    padding: 20px;
+    /* padding: 20px; */
+    width: 250px;
+    height: 1100px;
+    /* background-color: black; */
+    margin: auto;
   }
 
   .mechanical-skils {
@@ -1565,12 +1606,11 @@ footer .text {
   }
 
   .container {
-    justify-self: center;
-    width: 350px;
+    width: 250px;
   }
 
   .skils .mechanical-skils .container {
-    width: 350px;
+    width: 250px;
   }
 
   /* Portfolio */
@@ -1585,12 +1625,16 @@ footer .text {
     margin-top: 4.2rem;
   }
 
+  .portfolio .main-row {
+    height: 400px;
+  }
+
   .portfolio svg {
     margin-top: 1070px;
   }
 
-  .portfolio .portfolio-content .main-row {
-    height: 180px;
+  .portfolio-content .row .main-row {
+    height: 230px;
   }
 
   /* Contact */
@@ -1620,7 +1664,25 @@ footer .text {
   }
 
   /* footer */
+  footer {
+    height: 40vh;
+  }
+
   footer .brand h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  footer .footer-list li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .bottom .footer-list {
+    margin-top: -60px;
+  }
+
+  footer .text {
+    margin-top: 25px;
   }
 }
