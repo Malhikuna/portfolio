@@ -235,6 +235,9 @@ nav {
   margin-bottom: 20px;
 }
 
+.hero .medsos {
+}
+
 .hero .medsos i {
   display: inline-flex;
   align-items: center;
@@ -243,14 +246,11 @@ nav {
   height: 40px;
   color: black;
   border-radius: 25%;
+  margin-right: 20px;
   border: 3px solid black;
-  /* backdrop-filter: brightness(88%); */
   box-shadow: 3px 3px 1px black;
   font-size: 20px;
-  margin-right: 20px;
-  /* box-shadow: 0 0 20px transparent; */
   cursor: pointer;
-  /* z-index: 9999; */
   transition: all 0.3s ease-in-out;
 }
 
@@ -270,6 +270,10 @@ nav {
   left: 730px;
 }
 
+.kanan {
+  margin-top: -9%;
+}
+
 .kotak-photo img {
   width: 100%;
   border: 3px solid black;
@@ -278,7 +282,6 @@ nav {
 }
 
 .kotak-photo {
-  margin-top: -28%;
   display: flex;
   z-index: 3;
   flex-direction: column;
@@ -1131,9 +1134,9 @@ label {
 
 .right button {
   background-color: #0d0928;
-  width: 20%;
-  bottom: none;
-  overflow: none;
+  width: 80px;
+  /* bottom: none; */
+  /* overflow: none; */
   color: white;
   height: 35px;
   border-radius: 5px;
@@ -1303,31 +1306,42 @@ footer .text {
   }
 
   .hero h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   /* Hero */
   .hero {
     padding-top: 25%;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 
   .hero .row {
     justify-content: center;
   }
 
-  .hero .blob-background {
-    width: 500px;
-    height: 500px;
+  .hero .hero .main-content p {
+    width: 1%;
+  }
+
+  .hero .row {
+    justify-content: center;
   }
 
   .hero .kanan {
+    margin-top: -20px;
+  }
+
+  .hero .blob-background {
+    top: -5px;
+    left: 350px;
+    width: 650px;
+    height: 650px;
   }
 
   .hero .kotak-photo img {
     height: auto;
-    width: 100%;
+    width: 200px;
   }
 
   /* Skils */
@@ -1366,6 +1380,49 @@ footer .text {
   .navbar-list ul li {
     margin-left: 5px;
   }
+
+  /* Skils */
+  .skils {
+    height: 220vh;
+  }
+
+  .skils .skils-content {
+    flex-direction: column;
+  }
+
+  /* Portfolio */
+  .portfolio {
+    height: 750vh;
+  }
+
+  .portfolio .portfolio-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .portfolio .main-text {
+    width: 200px;
+  }
+
+  .portfolio .main-row p {
+    width: 90%;
+  }
+
+  .portfolio-content .row .main-row {
+    height: 170px;
+  }
+
+  /* Contact */
+  .contact .right .input {
+    flex-direction: column;
+  }
+
+  .input .group {
+    width: 100%;
+  }
+
+  .right button {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1393,21 +1450,45 @@ footer .text {
 
   /* Hero */
   .hero {
-    height: 88vh;
+    height: 150vh;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
-  .circle {
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    top: -20px;
-    left: 250px;
+  .hero .main-content .medsos i {
+    margin-right: 0;
   }
 
-  .circle img {
-    width: 220px;
-    height: 220px;
-    margin: 15px 0 0 15px;
+  .hero .row {
+    flex-direction: column-reverse;
+    margin-top: 90px;
+  }
+
+  .kotak-photo img {
+    margin: auto;
+  }
+
+  .kotak-photo {
+    margin: auto;
+    padding: 10px;
+    width: 230px;
+  }
+
+  .hero .main-content {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .hero .blob-background {
+    /* display: none; */
+  }
+
+  .hero .main-content i {
+    margin-bottom: 20px;
+  }
+
+  .hero .main-content .button {
+    margin: auto;
   }
 
   .menu {
@@ -1415,15 +1496,11 @@ footer .text {
   }
 
   .main-content {
-    width: 50%;
   }
 
-  .hero .medsos i {
-    width: 25px;
-    height: 25px;
-    color: var(--main-color);
-    font-size: 20px;
-    margin-right: 10px;
+  .hero .blob-background {
+    top: -10px;
+    left: -100px;
   }
 
   /* About */
@@ -1453,10 +1530,15 @@ footer .text {
   /* Skils */
   .skils {
     height: 210vh;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .skils-content {
+    justify-content: center;
     flex-direction: column;
+    padding: 20px;
   }
 
   .mechanical-skils {
@@ -1473,13 +1555,28 @@ footer .text {
     display: none;
   }
 
+  .skils {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
   .skils svg {
     margin-top: 660px;
   }
 
+  .container {
+    justify-self: center;
+    width: 350px;
+  }
+
+  .skils .mechanical-skils .container {
+    width: 350px;
+  }
+
   /* Portfolio */
+
   .portfolio {
-    height: 420vh;
+    height: 640vh;
   }
 
   .portfolio-content {
@@ -1492,18 +1589,22 @@ footer .text {
     margin-top: 1070px;
   }
 
+  .portfolio .portfolio-content .main-row {
+    height: 180px;
+  }
+
   /* Contact */
   .c-content {
     flex-direction: column;
   }
 
   .contact .left {
-    /* display: none; */
+    display: none;
     height: 600px;
   }
 
   .contact .right {
-    margin-top: 120px;
+    margin-top: 10px;
     height: 600px;
     width: 100%;
     border-radius: 20px;
@@ -1516,5 +1617,10 @@ footer .text {
 
   .input .group {
     width: 100%;
+  }
+
+  /* footer */
+  footer .brand h2 {
+    font-size: 1.4rem;
   }
 }
