@@ -663,7 +663,7 @@ nav {
 
 @keyframes tw-fill {
   100% {
-    width: 75%;
+    width: 80%;
   }
 }
 
@@ -740,7 +740,7 @@ nav {
 
 @keyframes js-fill {
   100% {
-    width: 20%;
+    width: 10%;
   }
 }
 
@@ -750,7 +750,7 @@ nav {
 
 @keyframes bs-fill {
   100% {
-    width: 80%;
+    width: 70%;
   }
 }
 
@@ -1228,8 +1228,8 @@ footer .text {
     margin-left: 30px;
   }
 
-  .hero h1 {
-    font-size: 1.5rem;
+  .hero .main-content h1 {
+    font-size: 2rem;
   }
 
   /* Hero */
@@ -1335,6 +1335,33 @@ footer .text {
     margin-left: 5px;
   }
 
+  /* Hero */
+  .hero {
+    padding-top: 30%;
+  }
+
+  /* About */
+  .about .about-text p {
+    width: 350px;
+    margin-bottom: 20px;
+    margin: auto;
+    text-align: justify;
+  }
+
+  .about .exp-area {
+    margin: auto;
+    width: 350px;
+    height: 350px;
+    padding-top: 20px;
+  }
+
+  .about .exp-area p {
+    justify-self: center;
+    margin-bottom: 20px;
+    width: 350px;
+    font-size: var(--p-font);
+  }
+
   /* Skils */
   .skils {
     height: 220vh;
@@ -1400,9 +1427,7 @@ footer .text {
   /* Hero */
   .hero {
     height: 150vh;
-    padding-top: 35%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 35% 5% 0 5%;
   }
 
   .hero .main-content .medsos i {
@@ -1414,12 +1439,7 @@ footer .text {
     width: 70%;
   }
 
-  .hero .main-content h1 {
-    font-size: 2rem;
-  }
-
   .hero .main-content {
-    /* margin-top: 30px; */
     text-align: center;
     margin: auto;
   }
@@ -1475,8 +1495,8 @@ footer .text {
 
   .about .exp-area p {
     justify-self: center;
-    margin-bottom: 7px;
     width: 500px;
+    margin-bottom: 20px;
   }
 
   .about .exp-area span {
