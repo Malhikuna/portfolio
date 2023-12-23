@@ -424,6 +424,15 @@ nav {
   bottom: -1%;
 }
 
+.hero .wave2 {
+  /* display: none; */
+  rotate: 180deg;
+  z-index: 2;
+  left: 0;
+  position: absolute;
+  top: 5.5%;
+}
+
 .hero .blob-dua {
   z-index: 2;
   width: 700px;
@@ -628,7 +637,7 @@ nav {
 
 .about svg {
   position: absolute;
-  bottom: 0;
+  bottom: -1%;
   left: 0;
 }
 
@@ -1296,6 +1305,12 @@ footer .text {
 }
 
 /* Responsive */
+@media screen and (min-width: 576px) {
+  .hero .wave2 {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 992px) {
   nav .navbar-list {
     width: 50%;
@@ -1499,12 +1514,16 @@ footer .text {
     display: flex;
   }
 
-  .main-content {
+  .hero .blob-dua {
+    display: none;
   }
 
   .hero .blob-background {
     top: -10px;
     left: -100px;
+  }
+
+  .hero .wave2 {
   }
 
   /* About */
