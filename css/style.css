@@ -1545,14 +1545,15 @@ footer .text {
   }
 
   .about .exp-area {
-    /* justify-self: center; */
     margin: auto;
     width: 340px;
     height: 300px;
+    padding-top: 20px;
   }
 
   .about .exp-area p {
-    margin-top: 10px;
+    justify-self: center;
+    margin-bottom: 7px;
     width: 300px;
   }
 
@@ -1630,7 +1631,7 @@ footer .text {
   /* Portfolio */
 
   .portfolio {
-    height: 590vh;
+    height: 620vh;
   }
 
   .portfolio-content {
