@@ -1051,7 +1051,7 @@ nav {
 
 .portfolio svg {
   position: absolute;
-  bottom: 0;
+  bottom: -0.5%;
   left: 0;
 }
 
@@ -1587,27 +1587,26 @@ footer .text {
   /* Skils */
   .skils {
     height: 210vh;
-    margin: auto;
     padding-left: 0;
     padding-right: 0;
   }
 
   .skils-content {
     flex-direction: column;
-    /* padding: 20px; */
-    width: 250px;
+    width: 280px;
     height: 1100px;
-    /* background-color: black; */
     margin: auto;
+    gap: 120px;
   }
 
   .mechanical-skils {
     width: 100%;
-    margin-top: 40px;
   }
 
-  .softskiils {
-    width: 100%;
+  .softskils {
+    width: 280px;
+    height: 300px;
+    margin: auto;
   }
 
   .panah.kanan,
@@ -1615,27 +1614,23 @@ footer .text {
     display: none;
   }
 
-  .skils {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-
   .skils svg {
     margin-top: 660px;
   }
 
-  .container {
-    width: 250px;
+  .skils .container {
+    width: 270px;
+    margin: auto;
   }
 
   .skils .mechanical-skils .container {
-    width: 250px;
+    width: 270px;
   }
 
   /* Portfolio */
 
   .portfolio {
-    height: 640vh;
+    height: 570vh;
   }
 
   .portfolio-content {
