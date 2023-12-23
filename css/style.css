@@ -1682,6 +1682,10 @@ footer .text {
     height: 40vh;
   }
 
+  footer .top {
+    justify-content: center;
+  }
+
   footer .brand h2 {
     font-size: 1.2rem;
   }
@@ -1698,5 +1702,14 @@ footer .text {
 
   footer .text {
     margin-top: 25px;
+  }
+
+  footer .brand {
+    margin-right: 0;
+  }
+
+  footer .medsos,
+  footer .my-contact {
+    display: none;
   }
 }
