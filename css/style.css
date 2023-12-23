@@ -235,9 +235,6 @@ nav {
   margin-bottom: 20px;
 }
 
-.hero .medsos {
-}
-
 .hero .medsos i {
   display: inline-flex;
   align-items: center;
@@ -425,12 +422,11 @@ nav {
 }
 
 .hero .wave2 {
-  /* display: none; */
   rotate: 180deg;
   z-index: 2;
   left: 0;
   position: absolute;
-  top: 5.5%;
+  top: 0;
 }
 
 .hero .blob-dua {
@@ -1442,6 +1438,10 @@ footer .text {
 
 @media screen and (max-width: 576px) {
   /* Nav */
+  nav {
+    position: sticky;
+  }
+
   nav ul {
     display: flex;
     position: absolute;
@@ -1546,7 +1546,7 @@ footer .text {
 
   .about .exp-area {
     margin: auto;
-    width: 340px;
+    width: 300px;
     height: 300px;
     padding-top: 20px;
   }
