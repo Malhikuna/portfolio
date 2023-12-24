@@ -188,9 +188,6 @@ nav {
   margin-bottom: 20px;
 }
 
-.hero .medsos {
-}
-
 .hero .medsos i {
   display: inline-flex;
   align-items: center;
@@ -212,19 +209,12 @@ nav {
   color: white;
 }
 
-.blob-satu {
-  width: 700px;
-  height: 700px;
-  position: absolute;
-  top: -260px;
-  left: 730px;
-}
-
-.kanan {
+.photo-content {
   margin-top: -9%;
 }
 
 .kotak-photo img {
+  height: auto;
   width: 100%;
   border: 3px solid black;
   cursor: pointer;
@@ -257,6 +247,7 @@ nav {
   top: -25px;
   left: -30px;
 }
+
 .sparkling2 {
   position: absolute;
   width: 50px;
@@ -264,24 +255,47 @@ nav {
   right: -15px;
 }
 
-.kotak-photo .love {
+.sparkling3 {
+  position: absolute;
+  width: 30px;
+  top: -12px;
+  left: 14px;
+  color: var(--main-color);
+}
+
+.sparkling4 {
+  position: absolute;
+  width: 30px;
+  bottom: -2px;
+  right: 28px;
+  color: var(--main-color);
+}
+
+.love {
   height: 30px;
   width: 30px;
   border: 3px solid black;
   border-radius: 10px;
+  box-shadow: var(--shadow);
   display: flex;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-.kotak-photo .love i {
+.love:hover {
+  transform: translateY(-4px);
+}
+
+.love i {
   margin: auto;
   font-size: 1.5rem;
   color: red;
-  text-shadow: 2px 2px 1px black;
 }
 
 .hero .main button {
   padding: 3px;
-  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
 .hero .main button:hover {
@@ -304,10 +318,10 @@ nav {
   align-self: center;
   font-size: 1rem;
   color: black;
-  /* padding: 5px; */
 }
 
 .hero button {
+  cursor: pointer;
   margin-right: 5px;
   font-size: 1.1rem;
   border-radius: 10px;
@@ -366,12 +380,12 @@ nav {
   padding: 85px 12% 0 12%;
 }
 
-.about .about-content {
+.about-content {
   display: flex;
   justify-content: space-around;
 }
 
-.about .about-text h2 {
+.about-text h2 {
   font-family: "Unbounded";
   font-size: var(--h2-font);
   margin-bottom: 20px;
@@ -379,7 +393,7 @@ nav {
   text-align: center;
 }
 
-.about .about-text h2::before {
+.about-text h2::before {
   content: "";
   position: absolute;
   bottom: -12px;
@@ -392,7 +406,7 @@ nav {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.about .about-text h2::after {
+.about-text h2::after {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -404,47 +418,44 @@ nav {
   box-shadow: 3px 3px 10px var(--main-color), -3px -3px 10px white;
 }
 
-.about .about-text p {
+.about-text p {
   width: 400px;
   margin-bottom: 20px;
 }
 
-.about .about-text .exp-area p {
+.exp-area p {
   color: var(--main-color);
   font-weight: 500;
+  font-family: "Open Sans";
+  font-size: var(--p-font);
+  line-height: 45px;
 }
 
-.about .about-text .exp-area p:nth-child(odd) {
+.exp-area p:nth-child(odd) {
   background-color: #0d0928;
   border-radius: 50px;
   padding: 0 10px 0 10px;
 }
 
-.about .about-text .exp-area p:nth-child(even) {
+.exp-area p:nth-child(even) {
   background-color: #171046;
   border-radius: 50px;
   padding: 0 10px 0 10px;
   position: relative;
 }
 
-.about .about-text .exp-area span {
+.exp-area span {
   color: white;
 }
 
-.about .about-text .exp-area p {
-  font-family: "Open Sans";
-  font-size: var(--p-font);
-  line-height: 45px;
-}
-
-.about .about-int h2 {
+.about-int h2 {
   font-family: "Unbounded";
   font-size: var(--h2-font);
   position: relative;
   text-align: center;
 }
 
-.about .about-int h2::before {
+.about-int h2::before {
   content: "";
   position: absolute;
   bottom: -12px;
@@ -456,7 +467,7 @@ nav {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.about .about-int h2::after {
+.about-int h2::after {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -786,7 +797,6 @@ nav {
   width: 100px;
   clip-path: polygon(0 30%, 60% 30%, 60% 15%, 100% 50%, 60% 85%, 60% 70%, 0 70%);
   transform: rotate(180deg);
-  /* box-shadow: 3px 3px 1px black; */
 }
 
 .skils svg {
@@ -803,7 +813,7 @@ nav {
   padding-left: 12%;
   padding-right: 12%;
   position: relative;
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
 .main-text {
@@ -869,15 +879,12 @@ nav {
   width: 100%;
   border-bottom: 3px solid black;
   cursor: pointer;
-  /* border-radius: 10px; */
 }
 
 .portfolio-content .row {
   display: flex;
   flex-direction: column;
   background-color: white;
-  /* background-color: transparent(0.1); */
-  /* border-radius: 10px; */
   border: 3px solid black;
   box-shadow: var(--shadow);
   transition: all 0.5s ease;
@@ -918,11 +925,10 @@ nav {
   width: 100%;
 }
 
-.top-row .github {
+.github {
   height: 40px;
   width: 40px;
   border: 2.5px solid black;
-  /* border-radius: 50%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -931,7 +937,7 @@ nav {
   transition: 0.5s;
 }
 
-.top-row .github:hover {
+.github:hover {
   background-color: white;
 }
 
@@ -1000,9 +1006,6 @@ nav {
   background-color: #171046;
   padding: 50px;
   overflow: hidden;
-}
-
-.left {
   font-family: "Open Sans";
 }
 
@@ -1073,7 +1076,7 @@ label {
   color: var(--main-color);
 }
 
-.contact .tag-line {
+.tag-line {
   font-family: "Unbounded";
   text-align: center;
   margin-bottom: 40px;
@@ -1084,7 +1087,7 @@ label {
   color: var(--main-color);
 }
 
-.contact .tag-line::before {
+.tag-line::before {
   content: "";
   position: absolute;
   bottom: -12px;
@@ -1096,7 +1099,7 @@ label {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.contact .tag-line::after {
+.tag-line::after {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -1120,27 +1123,27 @@ label {
   color: var(--main-color);
 }
 
-.contact .square {
+.circle {
   position: relative;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--main-color), #4169a1);
 }
 
-.square-1 {
+.circle-1 {
   top: 0px;
   left: 0px;
   width: 200px;
   height: 200px;
 }
 
-.square-2 {
+.circle-2 {
   top: -265px;
   left: 160px;
   width: 100px;
   height: 100px;
 }
 
-.square-3 {
+.circle-3 {
   top: -420px;
   left: 200px;
   width: 50px;
@@ -1228,7 +1231,7 @@ footer .text {
     margin-left: 30px;
   }
 
-  .hero .main-content h1 {
+  .main-content h1 {
     font-size: 2rem;
   }
 
@@ -1241,35 +1244,23 @@ footer .text {
   .hero .row {
     width: 100%;
     height: 400px;
+    justify-content: center;
   }
 
-  .hero .main-content {
+  .main-content {
     width: 400px;
     height: 300px;
   }
 
-  .hero .hero .main-content p {
-    width: 1%;
-  }
-
-  .hero .row {
-    justify-content: center;
-  }
-
-  .hero .kanan {
+  .photo-content {
     margin-top: -40px;
   }
 
-  .hero .blob2 {
+  .blob2 {
     display: none;
-    top: -5px;
-    left: 340px;
-    width: 650px;
-    height: 650px;
   }
 
-  .hero .kotak-photo img {
-    height: auto;
+  .kotak-photo img {
     width: 250px;
   }
 
@@ -1295,17 +1286,12 @@ footer .text {
     height: 340vh;
   }
 
-  .portfolio-content .row img {
-    height: auto;
-    width: 100%;
-  }
-
   .portfolio-content .row .main-row {
-    height: 240px;
+    height: 230px;
   }
 
   .portfolio .main-row p {
-    width: 90%;
+    width: 85%;
   }
 
   .portfolio .main-text {
@@ -1315,13 +1301,10 @@ footer .text {
 
 @media screen and (max-width: 834px) {
   /* skils */
-  .skils .container {
+  .softskils .container,
+  .mechanical-skils .container {
     width: 330px;
     margin: auto;
-  }
-
-  .skils .mechanical-skils .container {
-    width: 330px;
   }
 
   /* Portfolio */
@@ -1341,25 +1324,52 @@ footer .text {
   }
 
   /* About */
-  .about .about-text p {
-    width: 350px;
+  .about {
+    height: 150vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text p {
+    width: 500px;
     margin-bottom: 20px;
     margin: auto;
     text-align: justify;
+    font-size: var(--p-font);
   }
 
-  .about .exp-area {
+  .exp-area {
     margin: auto;
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
     padding-top: 20px;
   }
 
-  .about .exp-area p {
+  .exp-area p {
     justify-self: center;
+    width: 500px;
     margin-bottom: 20px;
-    width: 350px;
     font-size: var(--p-font);
+  }
+
+  .about-int {
+    margin-top: -100px;
+  }
+
+  .interest {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .interest i {
+    width: 90px;
+    height: 90px;
   }
 
   /* Skils */
@@ -1370,15 +1380,14 @@ footer .text {
   .skils .skils-content {
     flex-direction: column;
     gap: 100px;
+    margin: auto;
+    margin-top: 25px;
   }
 
-  .skils .container {
+  .softskils .container,
+  .mechanical-skils .container {
     width: 520px;
     margin: auto;
-  }
-
-  .skils .mechanical-skils .container {
-    width: 520px;
   }
 
   /* Portfolio */
@@ -1399,8 +1408,14 @@ footer .text {
   }
 
   /* Contact */
+  .c-content .left,
+  .c-content .right {
+    padding: 15px;
+  }
+
   .contact .right .input {
     flex-direction: column;
+    gap: 20px;
   }
 
   .input .group {
@@ -1427,42 +1442,34 @@ footer .text {
   /* Hero */
   .hero {
     height: 150vh;
-    padding: 35% 5% 0 5%;
-  }
-
-  .hero .main-content .medsos i {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .hero .main-content .button {
-    width: 70%;
-  }
-
-  .hero .main-content {
-    text-align: center;
-    margin: auto;
-  }
-
-  .hero .blob1 {
-    display: none;
-  }
-
-  .hero .main-content .button {
-    margin: auto;
+    padding: 60% 5% 0 5%;
   }
 
   .hero .row {
     flex-direction: column-reverse;
-    margin-top: 90px;
   }
 
-  .hero .kanan {
-    margin-bottom: 25px;
-  }
-
-  .kotak-photo img {
+  .main-content {
+    text-align: center;
     margin: auto;
+  }
+
+  .main-content .button {
+    width: 70%;
+    margin: auto;
+  }
+
+  .main-content .medsos i {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .blob1 {
+    display: none;
+  }
+
+  .photo-content {
+    margin-bottom: 25px;
   }
 
   .kotak-photo {
@@ -1471,63 +1478,14 @@ footer .text {
     width: 280px;
   }
 
+  .kotak-photo img {
+    margin: auto;
+  }
+
   /* About */
-  .about {
-    height: 150vh;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
-  .about .about-text p {
-    width: 500px;
-    margin-bottom: 20px;
-    margin: auto;
-    text-align: justify;
-    font-size: var(--p-font);
-  }
-
-  .about .exp-area {
-    margin: auto;
-    width: 500px;
-    height: 500px;
-    padding-top: 20px;
-  }
-
-  .about .exp-area p {
-    justify-self: center;
-    width: 500px;
-    margin-bottom: 20px;
-  }
-
-  .about .exp-area span {
-    font-size: 1.2rem;
-  }
-
-  .about-content {
-    flex-direction: column;
-  }
-
-  .about-int {
-    margin-top: -100px;
-  }
-
-  .interest {
-    padding-top: 30px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 5px;
-  }
-
   .interest i {
-    width: 70px;
-    height: 70px;
-  }
-
-  /* Contact */
-  .c-content .left,
-  .c-content .right {
-    padding: 20px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -1556,58 +1514,15 @@ footer .text {
 
   /* Hero */
   .hero {
-    height: 150vh;
-    padding-top: 50%;
-  }
-
-  .hero .main-content .medsos i {
-    margin-right: 0;
-  }
-
-  .hero .main-content .button {
-    width: 70%;
-    margin: auto;
-  }
-
-  .hero .row {
-    flex-direction: column-reverse;
-    margin-top: 90px;
-  }
-
-  .kotak-photo img {
-    margin: auto;
+    padding-top: 65%;
   }
 
   .kotak-photo {
-    margin: auto;
-    padding: 10px;
     width: 273.5px;
-  }
-
-  .hero .main-content {
-    margin-top: 30px;
-    text-align: center;
-  }
-
-  .hero .blob2 {
-    display: none;
-  }
-
-  .hero .main-content i {
-    margin-bottom: 20px;
   }
 
   .menu {
     display: flex;
-  }
-
-  .hero .blob1 {
-    display: none;
-  }
-
-  .hero .blob2 {
-    top: -10px;
-    left: -100px;
   }
 
   /* About */
@@ -1617,94 +1532,43 @@ footer .text {
     padding-right: 5%;
   }
 
-  .about .about-text p {
+  .about-text p {
     width: 400px;
-    margin-bottom: 20px;
-    margin: auto;
-    text-align: justify;
   }
 
-  .about .exp-area {
-    margin: auto;
+  .exp-area {
     width: 400px;
     height: 400px;
-    padding-top: 20px;
   }
 
-  .about .exp-area p {
-    justify-self: center;
-    margin-bottom: 7px;
+  .exp-area p {
     width: 400px;
-    font-size: var(--p-font);
-  }
-
-  .about .exp-area span {
-    font-size: 1rem;
-  }
-
-  .about-content {
-    flex-direction: column;
   }
 
   .about-int {
-    margin-top: 30px;
-  }
-
-  .interest {
-    padding-top: 30px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    margin-top: 20px;
   }
 
   .interest i {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 
   /* Skils */
   .skils {
     height: 210vh;
-    padding-left: 0;
-    padding-right: 0;
   }
 
-  .skils-content {
-    flex-direction: column;
-    width: 400px;
-    height: 1100px;
-    margin: auto;
-    gap: 120px;
-  }
-
-  .panah.kanan,
-  .panah.kiri {
-    display: none;
-  }
-
-  .skils .softskils .container {
+  .softskils .container,
+  .mechanical-skils .container {
     width: 380px;
     margin: auto;
-  }
-
-  .skils .mechanical-skils .container {
-    width: 380px;
   }
 
   /* Portfolio */
 
   .portfolio {
     height: 620vh;
-  }
-
-  .portfolio-content {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2.3rem;
-    margin-top: 4.2rem;
-  }
-
-  .portfolio .main-row {
-    height: 400px;
   }
 
   .portfolio-content .row .main-row {
@@ -1720,25 +1584,19 @@ footer .text {
     flex-direction: column;
   }
 
+  .c-content .left,
+  .c-content .right {
+    padding: 25px;
+  }
+
   .contact .left {
     display: none;
-    height: 600px;
   }
 
   .contact .right {
-    margin-top: 10px;
     height: 600px;
     width: 100%;
     border-radius: 20px;
-  }
-
-  .contact .right .input {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .input .group {
-    width: 100%;
   }
 
   /* footer */
@@ -1781,53 +1639,48 @@ footer .text {
 @media screen and (max-width: 450px) {
   /* Hero */
   .hero {
-    padding-top: 55%;
+    padding-top: 75%;
   }
 
-  .hero .kotak-photo {
+  .kotak-photo {
     width: 245px;
   }
 
-  .hero .kotak-photo img {
+  .kotak-photo img {
     width: 220px;
   }
 
-  .hero .main-content {
-    margin-top: 10px;
+  .main-content {
     width: 300px;
   }
 
-  .hero .main-content h1 {
+  .main-content h1 {
     font-size: 1.5rem;
   }
 
-  .hero .main-content p {
-    font-size: 15px;
-  }
-
-  .hero .main-content .button {
-    width: 75%;
+  .main-content .button {
+    width: 80%;
   }
 
   /* About */
-  .about .about-text p {
+  .about-text p {
     width: 300px;
   }
 
-  .about .exp-area {
-    margin: auto;
+  .exp-area {
     width: 300px;
     height: 300px;
-    padding-top: 20px;
   }
 
-  .about .exp-area p {
-    justify-self: center;
-    margin-bottom: 7px;
+  .about-text .exp-area p {
     width: 300px;
+    font-size: 1rem;
   }
 
-  /* About */
+  .about-int {
+    margin-top: 100px;
+  }
+
   .interest i {
     width: 50px;
     height: 50px;
@@ -1839,13 +1692,10 @@ footer .text {
     gap: 60px;
   }
 
-  .skils .softskils .container {
+  .softskils .container,
+  .mechanical-skils .container {
     width: 300px;
     margin: auto;
-  }
-
-  .skils .mechanical-skils .container {
-    width: 300px;
   }
 
   /* Portfolio */
