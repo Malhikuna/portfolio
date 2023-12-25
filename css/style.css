@@ -703,13 +703,13 @@ nav {
   position: absolute;
   filter: drop-shadow(3px 3px 3px black);
   top: 100px;
-  left: 630px;
+  left: 46%;
 }
 
 .panah-content2 {
   position: absolute;
   top: 475px;
-  left: 630px;
+  left: 46%;
   filter: drop-shadow(5px 5px 3px black);
 }
 
@@ -719,7 +719,7 @@ nav {
 
 .panah.kanan2 {
   top: 114px;
-  left: 650px;
+  left: 47.5%;
   background-color: var(--bg1);
   height: 70px;
   width: 70px;
@@ -732,7 +732,7 @@ nav {
 
 .panah.kiri2 {
   top: 489px;
-  left: 640px;
+  left: 46.8%;
   background-color: var(--bg1);
   height: 70px;
   width: 70px;
