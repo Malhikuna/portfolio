@@ -56,11 +56,12 @@ nav {
   display: none;
   z-index: 9999;
   position: relative;
+  align-self: center;
 }
 
 .menu-icon {
-  margin-left: 40px;
-  margin-top: 5px;
+  /* margin-left: 40px;
+  margin-top: 5px; */
 }
 
 .judul {
@@ -378,6 +379,7 @@ nav {
   height: 130vh;
   background-color: var(--bg2);
   padding: 85px 12% 0 12%;
+  overflow: hidden;
 }
 
 .about-content {
@@ -385,7 +387,7 @@ nav {
   justify-content: space-around;
 }
 
-.about-text h2 {
+.about h2 {
   font-family: "Unbounded";
   font-size: var(--h2-font);
   margin-bottom: 20px;
@@ -393,10 +395,13 @@ nav {
   text-align: center;
 }
 
-.about-text h2::before {
+.about h2::before,
+.skils h2::before,
+.main-text h2::before,
+.bottom-line::before,
+.tag-line::before {
   content: "";
   position: absolute;
-  bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
   width: 10px;
@@ -406,16 +411,27 @@ nav {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.about-text h2::after {
+.about h2::after,
+.skils h2::after,
+.main-text h2::after,
+.bottom-line::after,
+.tag-line::after {
   content: "";
   position: absolute;
-  bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%;
-  height: 2px;
   background: var(--main-color);
   box-shadow: 3px 3px 10px var(--main-color), -3px -3px 10px white;
+}
+
+.about h2::before {
+  bottom: -12px;
+}
+
+.about h2::after {
+  bottom: -8px;
+  width: 200px;
+  height: 2px;
 }
 
 .about-text p {
@@ -446,37 +462,6 @@ nav {
 
 .exp-area span {
   color: white;
-}
-
-.about-int h2 {
-  font-family: "Unbounded";
-  font-size: var(--h2-font);
-  position: relative;
-  text-align: center;
-}
-
-.about-int h2::before {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background: var(--main-color);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.about-int h2::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  height: 2px;
-  background: var(--main-color);
-  box-shadow: 3px 3px 10px var(--main-color), -3px -3px 10px white;
 }
 
 .interest {
@@ -519,6 +504,7 @@ nav {
   background-color: var(--bg1);
   padding: 10px 12% 0 12%;
   position: relative;
+  overflow: hidden;
 }
 
 .skils h2 {
@@ -526,31 +512,17 @@ nav {
   font-size: var(--h2-font);
   text-align: center;
   position: relative;
+  letter-spacing: 2px;
 }
 
 .skils h2::before {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--main-color);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  bottom: -11px;
 }
 
 .skils h2::after {
-  content: "";
-  position: absolute;
   bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10%;
+  width: 130px;
   height: 3px;
-  background: var(--main-color);
-  box-shadow: 3px 3px 10px var(--main-color), -3px -3px 10px white;
 }
 
 .skils-content {
@@ -573,40 +545,22 @@ nav {
 }
 
 .container h2 {
-  font-family: "Unbounded";
-  font-size: var(--h2-font);
   margin-bottom: 40px;
-  text-align: center;
-  letter-spacing: 2px;
-  position: relative;
 }
 
-.container h2::before {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background: var(--main-color);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.container h2 span {
+.skils h2 span {
   color: var(--main-color);
 }
 
-.container h2::after {
-  content: "";
-  position: absolute;
+.softskils h2::before,
+.mechanical-skils h2::before {
+  bottom: -12px;
+}
+
+.softskils h2::after {
+  width: 190px;
   bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
   height: 2.7px;
-  background: var(--main-color);
-  box-shadow: 3px 3px 10px var(--main-color), -3px -3px 10px white;
 }
 
 .skil:not(:last-child) {
@@ -638,83 +592,29 @@ nav {
   box-shadow: 0 0 5px rgba(28, 151, 252, 0.6);
 }
 
-#com-bar {
-  animation: com-fill 2s 1.5s forwards;
-}
-
-@keyframes com-fill {
-  100% {
-    width: 70%;
-  }
+#com-bar,
+#ps-bar,
+#html-bar,
+#bs-bar {
+  width: 70%;
 }
 
 #cre-bar {
-  animation: cre-fill 2s 1.5s forwards;
-}
-
-@keyframes cre-fill {
-  100% {
-    width: 85%;
-  }
-}
-
-#ps-bar {
-  animation: ps-fill 2s 1.5s forwards;
-}
-
-@keyframes ps-fill {
-  100% {
-    width: 70%;
-  }
+  width: 85%;
 }
 
 #tw-bar {
-  animation: tw-fill 2s 1.5s forwards;
-}
-
-@keyframes tw-fill {
-  100% {
-    width: 80%;
-  }
+  width: 80%;
 }
 
 .mechanical-skils {
   margin-top: -40px;
-  /* z-index: 2; */
-}
-
-.mechanical-skils h2 {
-  font-family: "Unbounded";
-  font-size: var(--h2-font);
-  position: relative;
-}
-
-.mechanical-skils h2 span {
-  color: var(--main-color);
-}
-
-.mechanical-skils h2::before {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background: var(--main-color);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .mechanical-skils h2::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
+  width: 250px;
   height: 2.7px;
-  background: var(--main-color);
-  box-shadow: 3px 3px 10px var(--main-color), -3px -3px 10px white;
+  bottom: -8.5px;
 }
 
 .mechanical-skils .container {
@@ -725,44 +625,12 @@ nav {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
 
-#html-bar {
-  animation: html-fill 2s 1.5s forwards;
-}
-
-@keyframes html-fill {
-  100% {
-    width: 70%;
-  }
-}
-
 #css-bar {
-  animation: css-fill 2s 1.5s forwards;
-}
-
-@keyframes css-fill {
-  100% {
-    width: 60%;
-  }
+  width: 60%;
 }
 
 #js-bar {
-  animation: js-fill 2s 1.5s forwards;
-}
-
-@keyframes js-fill {
-  100% {
-    width: 10%;
-  }
-}
-
-#bs-bar {
-  animation: bs-fill 2s 1.5s forwards;
-}
-
-@keyframes bs-fill {
-  100% {
-    width: 70%;
-  }
+  width: 10%;
 }
 
 .logo i {
@@ -841,28 +709,18 @@ nav {
   color: var(--main-color);
 }
 
-.main-text h2::before {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
+.main-text h2::before,
+.bottom-line::before {
+  bottom: -0.5px;
   width: 10px;
   height: 10px;
-  background: var(--main-color);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.main-text h2::after {
-  content: "";
-  position: absolute;
+.main-text h2::after,
+.bottom-line::after {
   bottom: 3px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
+  width: 160px;
   height: 3px;
-  background: var(--main-color);
-  box-shadow: 3px 3px 10px var(--main-color), -3px -3px 10px white;
 }
 
 .portfolio-content {
@@ -947,27 +805,11 @@ nav {
 }
 
 .bottom-line::before {
-  content: "";
-  position: absolute;
   bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background: var(--main-color);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .bottom-line::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 15%;
-  height: 2.5px;
-  background: var(--main-color);
-  box-shadow: 3px 3px 10px var(--main-color), -3px -3px 10px white;
+  bottom: -9px;
 }
 
 .portfolio svg {
@@ -985,6 +827,7 @@ nav {
   padding-right: 12%;
   position: relative;
   padding-top: 85px;
+  overflow: hidden;
 }
 
 .c-content {
@@ -1088,27 +931,13 @@ label {
 }
 
 .tag-line::before {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background: var(--main-color);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  bottom: -11.5px;
 }
 
 .tag-line::after {
-  content: "";
-  position: absolute;
   bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 15%;
+  width: 180px;
   height: 2.5px;
-  background: var(--main-color);
-  box-shadow: 3px 3px 10px var(--main-color), -3px -3px 10px white;
 }
 
 .contact .list {
@@ -1532,17 +1361,14 @@ footer .text {
     padding-right: 5%;
   }
 
-  .about-text p {
+  .about-text p,
+  .exp-area,
+  .exp-area p {
     width: 400px;
   }
 
   .exp-area {
-    width: 400px;
     height: 400px;
-  }
-
-  .exp-area p {
-    width: 400px;
   }
 
   .about-int {
@@ -1663,17 +1489,17 @@ footer .text {
   }
 
   /* About */
-  .about-text p {
+  .about-text p,
+  .exp-area,
+  .exp-area p {
     width: 300px;
   }
 
   .exp-area {
-    width: 300px;
     height: 300px;
   }
 
-  .about-text .exp-area p {
-    width: 300px;
+  .exp-area p {
     font-size: 1rem;
   }
 
@@ -1696,6 +1522,10 @@ footer .text {
   .mechanical-skils .container {
     width: 300px;
     margin: auto;
+  }
+
+  .mechanical-skils h2::after {
+    width: 175px;
   }
 
   /* Portfolio */
