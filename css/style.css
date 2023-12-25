@@ -372,6 +372,15 @@ nav {
   height: 900px;
 }
 
+.atap {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 4.2%;
+  left: 0;
+  background-color: var(--bg2);
+}
+
 /* About */
 .about {
   position: relative;
