@@ -16,7 +16,7 @@ links.forEach((link) => {
   });
 });
 
-// Green Sock
+// GreenSock
 gsap.registerPlugin(TextPlugin);
 gsap.to(".ket", { duration: 3, text: "Mahasiswa Universitas Pasundan Angkatan 2023" });
 gsap.to(".hello", { duration: 1, text: "Hello, There!" });

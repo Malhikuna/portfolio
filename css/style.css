@@ -45,8 +45,8 @@ nav {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 4px;
-  right: -1px;
+  top: -1.8px;
+  right: -2.9px;
   opacity: 0;
   z-index: 3;
   cursor: pointer;
@@ -163,12 +163,6 @@ nav {
 
 .main-content {
   z-index: 3;
-}
-
-.main-content {
-  padding-left: 10px;
-  height: 270px;
-  border-radius: 10px 0 0 10px;
 }
 
 .main-content h4 {
@@ -487,6 +481,7 @@ nav {
 .about-text p {
   width: 400px;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .exp-area p {
@@ -1266,7 +1261,6 @@ footer .text {
     width: 500px;
     margin-bottom: 20px;
     margin: auto;
-    text-align: justify;
     font-size: var(--p-font);
   }
 
