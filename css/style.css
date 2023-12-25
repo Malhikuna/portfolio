@@ -691,7 +691,6 @@ nav {
 }
 
 .panah {
-  position: absolute;
   border-radius: 50%;
   background-color: var(--main-color);
   height: 100px;
@@ -699,43 +698,57 @@ nav {
   clip-path: polygon(0 30%, 60% 30%, 60% 15%, 100% 50%, 60% 85%, 60% 70%, 0 90%);
 }
 
-.panah-content1 {
+.panahhh1 {
   position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+}
+
+.panahhh2 {
+  position: absolute;
+  top: 460px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+}
+
+.panah-content1 {
   filter: drop-shadow(3px 3px 3px black);
-  top: 100px;
-  left: 46%;
 }
 
 .panah-content2 {
-  position: absolute;
-  top: 475px;
-  left: 46%;
   filter: drop-shadow(5px 5px 3px black);
 }
 
-.panah.kanan {
+.panah.kanan,
+.panah.kiri {
   opacity: 0.9;
 }
 
-.panah.kanan2 {
-  top: 114px;
-  left: 47.5%;
+.panah.kanan2,
+.panah.kiri2 {
+  position: absolute;
   background-color: var(--bg1);
   height: 70px;
+  top: 15%;
+  left: 48%;
   width: 70px;
 }
 
 .panah.kiri {
-  opacity: 0.9;
   transform: rotate(180deg);
 }
 
 .panah.kiri2 {
-  top: 489px;
-  left: 46.8%;
-  background-color: var(--bg1);
-  height: 70px;
-  width: 70px;
+  left: 47%;
   transform: rotate(180deg);
 }
 
