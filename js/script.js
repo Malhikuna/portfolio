@@ -18,5 +18,5 @@ links.forEach((link) => {
 
 // GreenSock
 gsap.registerPlugin(TextPlugin);
-gsap.to(".ket", { duration: 3, text: "Mahasiswa Universitas Pasundan Angkatan 2023" });
+gsap.to(".ket", { duration: 3, text: "I'm studying at Pasundan University" });
 gsap.to(".hello", { duration: 1, text: "Hello, There!" });
