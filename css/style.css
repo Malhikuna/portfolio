@@ -22,7 +22,7 @@ body {
   --h2-font: 1.3rem;
   --h4-font: 1.1rem;
   --p-font: 1.1rem;
-  --shadow: 3px 3px 1px black;
+  --shadow: 3px 3px 1px #1f1f1f;
 }
 
 /* Navbar */
@@ -420,9 +420,9 @@ nav {
 .about {
   position: relative;
   width: 100%;
-  height: 140vh;
+  min-height: 100vh;
   background-color: var(--bg2);
-  padding: 85px 12% 0 12%;
+  padding: 85px 12% 15% 12%;
   overflow: hidden;
 }
 
@@ -545,12 +545,12 @@ nav {
 /* Skils */
 .skils {
   width: 100%;
-  height: 220vh;
+  min-height: 100vh;
   background-color: var(--bg1);
   padding: 10px 12% 0 12%;
   position: relative;
   overflow: hidden;
-  margin-top: -1%;
+  padding-bottom: 33rem;
 }
 
 .skils h2 {
@@ -572,13 +572,13 @@ nav {
 }
 
 .skils-content {
-  margin-top: 80px;
   display: flex;
   justify-content: space-between;
 }
 
 .container {
   width: 400px;
+  height: 450px;
   padding: 40px 30px;
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 20px;
@@ -598,19 +598,43 @@ nav {
   color: var(--main-color);
 }
 
-.softskils {
-  margin-top: 230px;
+.softskils,
+.hardskils {
+  height: 200px;
+  margin-top: 100px;
 }
 
 .softskils h2::before,
-.mechanical-skils h2::before {
+.hardskils h2::before {
   bottom: -12px;
 }
 
-.softskils h2::after {
+.softskils h2::after,
+.hardskils h2::after {
   width: 190px;
   bottom: -8px;
   height: 2.7px;
+}
+
+.hardskils .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hardskils .logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+}
+
+.hardskils .logo-box i {
+  color: #80ff00;
 }
 
 .skil:not(:last-child) {
@@ -642,8 +666,7 @@ nav {
   box-shadow: 0 0 5px rgba(28, 151, 252, 0.6);
 }
 
-#com-bar,
-#ps-bar {
+#com-bar {
   width: 70%;
 }
 
@@ -651,62 +674,9 @@ nav {
   width: 85%;
 }
 
-#tw-bar {
+#tw-bar,
+#ps-bar {
   width: 80%;
-}
-
-.mechanical-skils {
-  margin-top: -40px;
-}
-
-.mechanical-skils h2::after {
-  width: 250px;
-  height: 2.7px;
-  bottom: -8.5px;
-}
-
-.mechanical-skils .container {
-  width: 400px;
-  padding: 60px 30px;
-  background-color: rgba(255, 255, 255, 0.06);
-  border-radius: 20px;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-}
-
-#jv-bar {
-  width: 15%;
-}
-
-#bs-bar {
-  width: 80%;
-}
-
-#html-bar {
-  width: 90%;
-}
-
-#css-bar {
-  width: 85%;
-}
-
-#js-bar {
-  width: 55%;
-}
-
-#r-bar {
-  width: 25%;
-}
-
-#db-bar {
-  width: 30%;
-}
-
-#php-bar {
-  width: 50%;
-}
-
-#c-bar {
-  width: 10%;
 }
 
 .logo i {
@@ -730,7 +700,7 @@ nav {
 
 .panahhh1 {
   position: absolute;
-  top: 240px;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100px;
@@ -741,7 +711,7 @@ nav {
 
 .panahhh2 {
   position: absolute;
-  top: 780px;
+  top: 520px;
   left: 0;
   width: 100%;
   height: 100px;
@@ -791,32 +761,33 @@ nav {
 /* Portfolio */
 .portfolio {
   width: 100%;
-  height: 1320vh;
+  min-height: 100vh;
   background-color: whitesmoke;
   padding-left: 12%;
   padding-right: 12%;
   position: relative;
   padding-top: 70px;
+  padding-bottom: 12rem;
 }
 
-.main-text {
+.m-text {
   display: flex;
   justify-content: center;
   margin: auto;
   background-color: var(--bg1);
   width: 40%;
   height: 40px;
-  padding: 2px;
+  padding: 5px;
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
 
 .main-text2 {
   width: 50%;
-  margin-top: 40px;
+  margin-top: 100px;
 }
 
-.main-text h2 {
+.m-text h2 {
   color: white;
   font-family: "Unbounded";
   font-size: var(--h2-font);
@@ -825,22 +796,8 @@ nav {
   text-shadow: var(--shadow);
 }
 
-.main-text h2 span {
+.m-text h2 span {
   color: var(--main-color);
-}
-
-.main-text h2::before,
-.bottom-line::before {
-  bottom: -0.5px;
-  width: 10px;
-  height: 10px;
-}
-
-.main-text h2::after,
-.bottom-line::after {
-  bottom: 3px;
-  width: 160px;
-  height: 3px;
 }
 
 .portfolio-content {
@@ -852,14 +809,117 @@ nav {
   position: relative;
 }
 
-.portfolio-content .row img {
+.scratch-portfolio,
+.php-portfolio {
+  margin-top: 20px;
+  max-width: 100%;
+  min-height: 100px;
+}
+
+.scratch-portfolio .content,
+.php-portfolio .content {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+  border: 3px solid black;
+  box-shadow: var(--shadow);
+  transition: all 0.5s ease;
+}
+
+.scratch-portfolio .content .left {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.scratch-portfolio .content .left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: -1;
+  background-image: url(../img/background/background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.scratch-portfolio .content .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 45%;
+  background-color: #ddd;
+  height: 100%;
+}
+
+.scratch-portfolio .content .right .text-box {
+  width: 300px;
+  height: 300px;
+  background-color: #171046;
+  border: 1px solid black;
+  box-shadow: var(--shadow);
+  padding: 15px;
+}
+
+.scratch-portfolio .content .right button {
+  padding: 5px 0 5px 0;
+  width: 120px;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.scratch-portfolio img {
+  margin: auto;
+  width: 450px;
+  height: auto;
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+/* Fading animation */
+.scratch-portfolio .fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.portfolio-web .row img {
   height: auto;
   width: 100%;
   border-bottom: 3px solid black;
   cursor: pointer;
 }
 
-.portfolio-content .row {
+.certificate img {
+  height: auto;
+  width: 100%;
+  border: 3px solid black;
+  box-shadow: var(--shadow);
+  transition: all 0.5s ease;
+  color: black;
+}
+
+.portfolio-web .row {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -897,7 +957,7 @@ nav {
   font-weight: 700;
 }
 
-.portfolio-content .row .main-row button {
+.portfolio-web .row .main-row button {
   height: 40px;
   width: 100px;
   background-color: #7fff00;
@@ -1039,7 +1099,7 @@ label {
   color: white;
 }
 
-.right button {
+.c-content .right button {
   background-color: #0d0928;
   width: 80px;
   color: white;
@@ -1051,7 +1111,7 @@ label {
   transition: 0.5s !important;
 }
 
-.right button:hover {
+.c-content .right button:hover {
   color: var(--main-color);
 }
 
