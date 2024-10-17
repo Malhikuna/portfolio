@@ -22,19 +22,36 @@ gsap.to(".ket", { duration: 3, text: "I'm studying at Pasundan University" });
 gsap.to(".hello", { duration: 1, text: "Hello, There!" });
 
 // slides
-let slideIndex = 0;
-showSlides();
+let slide1Index = 0;
+showSlides1();
 
-function showSlides() {
+function showSlides1() {
   let i;
-  let slides = document.getElementsByClassName("slides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  let slides1 = document.getElementsByClassName("slides1");
+  for (i = 0; i < slides1.length; i++) {
+    slides1[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
+  slide1Index++;
+  if (slide1Index > slides1.length) {
+    slide1Index = 1;
   }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 2500);
+  slides1[slide1Index - 1].style.display = "block";
+  setTimeout(showSlides1, 2500);
+}
+
+let slide2Index = 0;
+showSlides2();
+
+function showSlides2() {
+  let y;
+  let slides2 = document.getElementsByClassName("slides2");
+  for (y = 0; y < slides2.length; y++) {
+    slides2[y].style.display = "none";
+  }
+  slide2Index++;
+  if (slide2Index > slides2.length) {
+    slide2Index = 1;
+  }
+  slides2[slide2Index - 1].style.display = "block";
+  setTimeout(showSlides2, 2500);
 }
