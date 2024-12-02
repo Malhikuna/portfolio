@@ -1662,7 +1662,8 @@ footer .text {
   /* Portfolio */
 
   .portfolio {
-    height: 1650vh;
+    min-height: 100vh;
+    padding-bottom: 100px;
   }
 
   .portfolio-content .row .main-row {
